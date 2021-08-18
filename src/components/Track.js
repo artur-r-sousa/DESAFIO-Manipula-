@@ -1,22 +1,17 @@
 import React from 'react';
 import Player from './Player';
 import { useDispatch } from 'react-redux';
-import { addTrack, removeTrack } from '../store/Favorites/FavTracks.actions';
+import { addTrack } from '../store/Favorites/FavTracks.actions';
 
 
 export default function TrackList(props) {
     const dispatch = useDispatch();
-
     const track = props.track
-    console.log(track)
-
     const listItems = track.map((track) => 
       <li>{track.artist.name} - {track.title}
           <div>
             <img src={track.album.cover_medium} alt="cover"></img>
           </div>
-          
-          para uma melhor visualização, essa parte do codigo converte os segundos para minutos + segundos
           <p>Duração: {Math.round(track.duration / 60)}:{Math.round(track.duration % 60) < 10 ? '0'+Math.round(track.duration % 60) : Math.round(track.duration % 60)}</p>
 
 
