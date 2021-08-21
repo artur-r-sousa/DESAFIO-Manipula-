@@ -1,21 +1,9 @@
 import styled from 'styled-components';
 
-export const StyleSearch = styled.input`
-
-    background-color: #0C2323;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 25px;
-    width: 60%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-
-`
-
 export const StyleImg = styled.img`
 
+    width: 250px;
+    height: 250px;
     border-radius: 10%;
     box-shadow: 0 0 8px 5px #47AFAF;
 
@@ -23,17 +11,19 @@ export const StyleImg = styled.img`
 
 export const StyleLi = styled.li`
     
-
-    text-align: center;  
+    align-items: flex-start;  
     border-width: 5px;
     list-style-type: none;
     display: flex;
     flex-direction: row;
     margin-bottom: 40px;
+    margin-left: 30px;
     padding-top: 25px;
-    width: fit-content;
+    z-index:10;
+
 `
 export const StyleCard = styled.div`
+    
     display: flex;
     flex-direction: column;
     
@@ -58,7 +48,6 @@ export const StyleTitle = styled.p`
 
 `
 
-
 export const StyleSubTitle = styled.p`
 
     color: #47AFAF;
@@ -68,7 +57,15 @@ export const StyleSubTitle = styled.p`
 
 `
 
+//==================================================
+
 export const MainView = styled.div`
+    
+    display: flex;
+    flex-direction: row;
+
+`
+ export const TabView = styled.div`
     
     border-radius: 20px;
     border-style: none;
@@ -76,5 +73,72 @@ export const MainView = styled.div`
     color: white;
     display: flex;
     align-items: center;
-    margin: 40px;
+    margin-left: 200px;
+    margin-top: 200px;
+ `
+
+export const MainDiv = styled.div`
+
+    text-align: center;
+    background-color: #0C2323;
+
+`
+
+export const Items = styled.div`
+
+    display: flex;
+    flex-direction: row;
+
+` 
+
+export const StyledHeader = styled.header`
+
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    position: fixed;
+    background-color: #0C2323;
+
+`
+
+export const StyledAvatarImg = styled.img`
+
+    width: 50px;
+    height: 50px;
+
+`
+
+export const StyleSearch = styled.input`
+
+    background-color: #0C2323;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 25px;
+    width: 600px;
+    margin-left: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+
+`
+
+//==================================================
+
+export const StyledMainSideBar = styled.div`
+
+    margin-left: 40px;
+    margin-top: 200px;
+    position: fixed; 
+
+
+
+`
+
+export const StyledItems = styled.p`
+
+    color: white;
+    margin-left: 25px;
+    margin-bottom: 45px;
+
 `

@@ -9,10 +9,11 @@ export default function TrackList(props) {
     const track = props.track
     const listItems = track.map((track) => 
       <StyleLi title="listItem"> 
-          <StyleImg src={track.album.cover_medium} alt="cover"/>
+          <StyleImg src={track.album.cover_big} alt="cover"/>
           <StyleCard>
             <StyleTitle> {track.artist.name}</StyleTitle>
             <StyleSubTitle>{track.title}</StyleSubTitle>
+            <StyleSubTitle> Album : {track.album.title}</StyleSubTitle>
             <div>
               
             </div>
