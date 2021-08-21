@@ -7,7 +7,6 @@ import { StyleImg, StyleLi, StyleLink, StyleSubTitle, StyleTitle, StyleCard, Fav
 
 function FavTracks() {   
     const favTracks = useSelector((state) => state.favTracks)
-    console.log(favTracks)
     const dispatch = useDispatch();
     const listItems = favTracks.map((track) => 
         
@@ -17,13 +16,8 @@ function FavTracks() {
             <StyleTitle> {track.artist.name}</StyleTitle>
             <StyleSubTitle>{track.title}</StyleSubTitle>
             <StyleSubTitle> Album : {track.album.title}</StyleSubTitle>
-            <div>
-              
-            </div>
             <StyleSubTitle>Duração: {Math.round(track.duration / 60)}:{Math.round(track.duration % 60) < 10 ? '0'+Math.round(track.duration % 60) : Math.round(track.duration % 60)}</StyleSubTitle>
             <StyleLink href={track.link}>Ouça no Deezer!</StyleLink>
-
-
             <Player url={track.preview}/>
           </StyleCard>
 
@@ -33,8 +27,6 @@ function FavTracks() {
                 dispatch(removeTrack(track));
             }} 
             style={{width: 50, height: 50}}> ♥ </FavoriteHeart>
-          
-          <br></br>
       </StyleLi>
     );
 
