@@ -17,7 +17,6 @@ export default function (state = [], action) {
             const filterItem = action.payload
             const itemRemoved = state.filter(value => value.id !== filterItem.id)
             return itemRemoved;
-
         default:
             return state;
     }

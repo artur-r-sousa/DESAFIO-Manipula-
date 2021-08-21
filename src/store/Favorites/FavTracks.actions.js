@@ -2,7 +2,6 @@ export function addTrack(track) {
     return {
         type: 'addTrack',
         payload: track
-
     }
 }
 

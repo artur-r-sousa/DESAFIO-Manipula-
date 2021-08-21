@@ -16,7 +16,7 @@ function Favorites() {
 
             <FavoritesDiv>
                 <Link to="/" style={{textDecoration: 'none', color: 'white', fontWeight: 400, marginLeft: 15}}> Inicio </Link> 
-                    {favTracks.length == 0 && favAlbums.length == 0 ? 
+                    {favTracks.length === 0 && favAlbums.length === 0 ? 
                         <NoFavorite>Nenhum favorito adicionado ainda. Volte e comece a adicionar! </NoFavorite> 
                         :
                         <MainView>

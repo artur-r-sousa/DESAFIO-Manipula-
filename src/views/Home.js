@@ -82,7 +82,7 @@ function Home() {
             name="search" 
             placeholder="Procure uma musica, album, ou artista"
             onChange={(value) => {
-              value.target.value == '' ? getCharts() : setTimeout(()=>{queryValue(value.target.value)}, 1000);
+              value.target.value === '' ? getCharts() : setTimeout(()=>{queryValue(value.target.value)}, 1000);
             }}/>
         </form>
       </StyledHeader>

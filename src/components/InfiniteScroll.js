@@ -1,11 +1,10 @@
-import React,{ useEffect, useRef, useState } from 'react';
+import React,{ useEffect, useRef } from 'react';
 
 const UIInfiniteScroll = ({ fetchMore }) => {
  
     const containerRef = useRef();
-
-    function loadMore() {
-
+    
+    useEffect(()=>{
         const options = {
             root: null,
             rootMargin: '0px',
@@ -15,7 +14,6 @@ const UIInfiniteScroll = ({ fetchMore }) => {
             if(entry.isIntersecting) {
                 fetchMore();
                 observer.disconnect();
-                console.log('infinite trigger')
             }
         }, options);
 
@@ -24,10 +22,6 @@ const UIInfiniteScroll = ({ fetchMore }) => {
             
             observer.disconnect();
         }
-    }
-         
-    useEffect(()=>{
-        loadMore();
     }, []);
 
     return <div ref={containerRef}></div>
