@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import Player from './Player';
 import { useDispatch } from 'react-redux';
 import { removeTrack } from '../store/Favorites/FavTracks.actions';
-import { StyleImg, StyleLi, StyleLink, StyleSubTitle, StyleTitle, StyleCard } from '../style';
+import { StyleImg, StyleLi, StyleLink, StyleSubTitle, StyleTitle, StyleCard, FavoriteHeart } from '../style';
 
 function FavTracks() {   
     const favTracks = useSelector((state) => state.favTracks)
@@ -27,12 +27,12 @@ function FavTracks() {
             <Player url={track.preview}/>
           </StyleCard>
 
-          <img src={'https://preview.pixlr.com/images/800wm/100/1/1001389323.jpg'} alt="favorite" 
+          <FavoriteHeart
             onClick={()=>{
                 window.alert(track.title + ' removido dos favoritos')
                 dispatch(removeTrack(track));
             }} 
-            style={{width: 50, height: 50}}></img>
+            style={{width: 50, height: 50}}> ♥ </FavoriteHeart>
           
           <br></br>
       </StyleLi>

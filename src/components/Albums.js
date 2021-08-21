@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addFavAlbum } from '../store/Favorites/FavAlbum.actions';
-import { StyleImg, StyleLi, StyleTitle, StyleCard, StyleSubTitle } from '../style';
+import { StyleImg, StyleLi, StyleTitle, StyleCard, StyleSubTitle, FavoriteHeart } from '../style';
 
 export default function Albums(props) {
     const dispatch = useDispatch();
@@ -12,11 +12,11 @@ export default function Albums(props) {
           <StyleCard>
             <StyleTitle> {album.artist.name}</StyleTitle>
             <StyleSubTitle>{album.title}</StyleSubTitle>
-            <img src={'https://preview.pixlr.com/images/800wm/100/1/1001389323.jpg'} alt="favorite" 
+            <FavoriteHeart 
               onClick={()=>{
                 dispatch(addFavAlbum(album));
               }} 
-            style={{width: 50, height: 50}}></img>
+            > ♥ </FavoriteHeart>
           </StyleCard>   
           <br></br>
       </StyleLi>

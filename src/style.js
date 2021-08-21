@@ -59,10 +59,18 @@ export const StyleSubTitle = styled.p`
 
 //==================================================
 
+export const Divisor = styled.div`
+    width: 0px;
+    height: 50px;
+    border-style: solid;
+    color: #000;
+`
+
 export const MainView = styled.div`
     
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
 `
  export const TabView = styled.div`
@@ -75,6 +83,7 @@ export const MainView = styled.div`
     align-items: center;
     margin-left: 200px;
     margin-top: 200px;
+
  `
 
 export const MainDiv = styled.div`
@@ -126,6 +135,13 @@ export const StyleSearch = styled.input`
 
 `
 
+export const FavoriteHeart = styled.p`
+
+    font-size: 40px;
+    margin-left: 10px;
+
+`
+
 //==================================================
 
 export const StyledMainSideBar = styled.div`
@@ -133,8 +149,8 @@ export const StyledMainSideBar = styled.div`
     margin-left: 40px;
     margin-top: 200px;
     position: fixed; 
-
-
+    display: flex;
+    flex-direction: row;
 
 `
 
@@ -142,6 +158,23 @@ export const StyledItems = styled.p`
 
     color: white;
     margin-left: 25px;
+    margin-right: 25px;
     margin-bottom: 45px;
 
 `
+
+export const NoFavorite = styled.p`
+
+    color: white;
+    justify-content: center;
+    align-content: center;
+
+`
+
+export const FavoritesDiv = styled.div`
+
+    height: 100vh;
+    text-align: center;
+    background-color: #0C2323;
+
+` 

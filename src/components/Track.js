@@ -2,7 +2,7 @@ import React from 'react';
 import Player from './Player';
 import { useDispatch } from 'react-redux';
 import { addTrack } from '../store/Favorites/FavTracks.actions';
-import { StyleImg, StyleLi, StyleLink, StyleSubTitle, StyleTitle, StyleCard } from '../style';
+import { StyleImg, StyleLi, StyleLink, StyleSubTitle, StyleTitle, StyleCard, FavoriteHeart } from '../style';
 
 export default function TrackList(props) {
     const dispatch = useDispatch();
@@ -18,11 +18,11 @@ export default function TrackList(props) {
             <StyleLink href={track.link}>Ouça no Deezer!</StyleLink>
             <Player url={track.preview}/>
           </StyleCard>
-          <img src={'https://preview.pixlr.com/images/800wm/100/1/1001389323.jpg'} alt="favorite" 
+          <FavoriteHeart
             onClick={()=>{
               dispatch(addTrack(track));
             }} 
-            style={{width: 50, height: 50}}></img>
+            > ♥ </FavoriteHeart>
       </StyleLi>      
     );
     return (
