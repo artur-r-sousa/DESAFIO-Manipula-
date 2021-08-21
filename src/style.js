@@ -41,7 +41,7 @@ export const StyleLink = styled.a`
 export const StyleTitle = styled.p`
     
     color: #FFF;
-    font-size: larger;
+    font-size: medium;
     padding: 0px;
     margin-left: 10px;
     margin-bottom: 10px;
@@ -97,6 +97,9 @@ export const StyledHeader = styled.header`
     flex-direction: row;
     padding: 50px;
     position: fixed;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
     background-color: #0C2323;
 
 `

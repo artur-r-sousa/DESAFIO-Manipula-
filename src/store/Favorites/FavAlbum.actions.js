@@ -1,6 +1,6 @@
 export function addFavAlbum(album) {
     return {
-        type: 'addAlbum',
+        type: 'addFavAlbum',
         payload: album
 
     }
@@ -8,7 +8,7 @@ export function addFavAlbum(album) {
 
 export function removeFavAlbum(album) {
     return {
-        type: 'removeAlbum',
+        type: 'removeFavAlbum',
         payload: album
 
     }

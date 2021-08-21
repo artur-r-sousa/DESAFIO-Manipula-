@@ -5,20 +5,19 @@ import { StyleImg, StyleLi, StyleTitle, StyleCard, StyleSubTitle } from '../styl
 
 export default function Albums(props) {
     const dispatch = useDispatch();
-    const album = props.album
-    const listAlbums = album.map((album) => 
+    const albums = props.album;
+    const listAlbums = albums.map((album) => 
       <StyleLi title="listAlbum"> 
           <StyleImg src={album.cover_big} alt="cover"/>
           <StyleCard>
             <StyleTitle> {album.artist.name}</StyleTitle>
             <StyleSubTitle>{album.title}</StyleSubTitle>
-          </StyleCard>
-
-          <img src={'https://preview.pixlr.com/images/800wm/100/1/1001389323.jpg'} alt="favorite" 
-            onClick={()=>{
-              dispatch(addFavAlbum(album));
-            }} 
+            <img src={'https://preview.pixlr.com/images/800wm/100/1/1001389323.jpg'} alt="favorite" 
+              onClick={()=>{
+                dispatch(addFavAlbum(album));
+              }} 
             style={{width: 50, height: 50}}></img>
+          </StyleCard>   
           <br></br>
       </StyleLi>
       
@@ -26,10 +25,4 @@ export default function Albums(props) {
     return (
       <ul>{listAlbums}</ul>
     );
-
 }
-/*
-
-
-
-*/

@@ -1,6 +1,6 @@
 export default function (state = [], action) {
     switch(action.type) {
-        case 'addAlbum':
+        case 'addFavAlbum':
             const album = action.payload;
             //check if album already exists in the favorites
             const found = state.some(value => album.id === value.id);
@@ -13,7 +13,7 @@ export default function (state = [], action) {
                 return state;
             }
             
-        case 'removealbum':
+        case 'removeFavAlbum':
             const filterAlbum = action.payload
             const albumRemoved = state.filter(value => value.id !== filterAlbum.id)
             return albumRemoved;
